@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>10 motivos pra eu amar você</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #fbc2eb, #a6c1ee);
+      color: #333;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      margin-top: 50px;
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      color: #d6336c;
+    }
+
+    #reason-box {
+      margin: 30px auto;
+      font-size: 1.5em;
+      width: 70%;
+      min-height: 80px;
+      background-color: #fff0f6;
+      border: 2px dashed #d6336c;
+      padding: 20px;
+      border-radius: 15px;
+      transition: all 0.5s ease;
+    }
+
+    #image-container {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    #panda-img {
+      max-width: 300px;
+      border-radius: 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      opacity: 0;
+      transition: opacity 0.8s ease-in-out;
+    }
+
+    button {
+      padding: 12px 25px;
+      font-size: 1.2em;
+      background-color: #d6336c;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+      margin-top: 25px;
+    }
+
+    button:hover {
+      background-color: #ad1457;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>10 motivos pra eu amar você ❤️</h1>
+    <div id="reason-box">Clique no botão para ver um motivo!</div>
+
+    <!-- Imagem -->
+    <div id="image-container">
+      <img 
+        id="panda-img"
+        src=""
+        alt="Foto do casal"
+      />
+    </div>
+
+    <button onclick="showReason()">Mostrar um motivo</button>
+  </div>
+
+  <script>
+    const reasons = [
+      "Porque você é o meu porto seguro, meu bem ❤️",  
+      "Você me faz sentir amada e especial todos os dias 💓",  
+      "A sua risada é a minha música favorita 💓💓",  
+      "Eu amo como você me apoia em tudo que faço 💓💓💓",  
+      "O seu abraço é o meu lugar preferido no mundo 💓💓💓💓",  
+      "Você me entende mesmo quando eu não digo nada 💓💓💓💓💓",  
+      "Com você, até os dias ruins ficam leves 💓💓💓💓💓💓",  
+      "Eu amo como você cuida de mim e dos nossos momentos 💓💓💓💓💓💓💓",  
+      "A sua forma de amar me inspira todos os dias 💓💓💓💓💓💓💓💓",  
+      "Porque, simplesmente, a minha vida é mais bonita com você 💓💓💓💓💓💓💓💓💓",
+    ];
+
+    // A imagem que você me enviou
+    const pandaImages = [
+      "WhatsApp Image 2025-08-31 at 22.14.21.jpeg"
+    ];
+
+    let current = 0;
+
+    function showReason() {
+      const box = document.getElementById("reason-box");
+      const img = document.getElementById("panda-img");
+
+      if (current < reasons.length) {
+        box.innerText = reasons[current];
+
+        img.src = pandaImages[0];
+        img.style.opacity = "1";
+
+        current++;
+      } else {
+        box.innerText = "Já foram 10, mas eu te amo por incontáveis motivos ❤️";
+      }
+    }
+  </script>
+</body>
+</html>
